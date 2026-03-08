@@ -43,6 +43,7 @@
               pkgs.rust-bin.stable.${cargoTomlConfig.package.rust-version}.minimal
               wayland
               dbus
+              playerctl
             ];
             inherit nativeBuildInputs;
             LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath buildInputs;
@@ -56,6 +57,7 @@
               pkg-config
               wayland
               dbus
+              playerctl
           ];
           craneLib = crane.mkLib pkgs;
           doCheck = false;
